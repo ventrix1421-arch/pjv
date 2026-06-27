@@ -142,7 +142,7 @@ const portfolio = {
             title: "PROJECT GEM",
             description: "Project developed for DepEd Pangasinan II personnel.",
             image: "assets/images/project3.svg",
-            technologies: ["flutter"],
+            technologies: ["Flutter"],
             github: "",
             live: "",
             type: "web",
