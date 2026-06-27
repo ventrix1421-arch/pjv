@@ -178,12 +178,12 @@ const portfolio = {
             duration: "4 Years",
             gpa: "",
             honors: "",
-            description: "Bachelor of Science in Information Technology program with focus on web development, mobile applications, databases, and software engineering.",
+            description: "Bachelor of Science in Information Technology program with focus on web development, mobile applications, databases, and software development.",
             coursework: [
                 "Web Development",
                 "Mobile App Development",
                 "Database Management Systems",
-                "Software Engineering",
+                "Software Development",
                 "Object-Oriented Programming"
             ]
         },
