@@ -240,19 +240,27 @@ a {
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 section {
     opacity: 0;
-    transform: translateY(60px);
-    transition: 1s;
+    filter: blur(20px);
+    transform: translateY(80px) scale(0.96);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(.22, 1, .36, 1),
+        filter 1s ease;
+
+    will-change: transform, opacity, filter;
 }
 
 section.show {
     opacity: 1;
-    transform: translateY(0);
-}
-
-html {
-    scroll-behavior: smooth;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
 }
 
 .site-header {
