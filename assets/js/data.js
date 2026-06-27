@@ -4,6 +4,67 @@
  Edit ONLY this file. Portfolio + PDF Resume sync automatically.
 ================================================================
 */
+const loader = document.getElementById("loader");
+const progress = document.querySelector(".loader-progress-fill");
+const text = document.getElementById("loading-text");
+
+const messages = [
+    "Preparing Experience...",
+    "Loading Projects...",
+    "Building Components...",
+    "Optimizing UI...",
+    "Launching Portfolio..."
+];
+
+let percent = 0;
+let index = 0;
+
+const interval = setInterval(() => {
+
+    percent += Math.random() * 12;
+
+    if (percent >= 100) {
+        percent = 100;
+    }
+
+    progress.style.width = percent + "%";
+
+    if (index < messages.length - 1 && percent > (index + 1) * 20) {
+        index++;
+        text.textContent = messages[index];
+    }
+
+    if (percent === 100) {
+
+        clearInterval(interval);
+
+        setTimeout(() => {
+
+            loader.classList.add("hide");
+
+            setTimeout(() => {
+                loader.remove();
+            }, 800);
+
+        }, 500);
+
+    }
+
+}, 180);
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{
+    threshold:.15
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+    observer.observe(sec);
+});
 
 const portfolio = {
 
