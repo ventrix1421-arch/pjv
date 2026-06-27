@@ -98,8 +98,7 @@ const portfolio = {
             company: "Schools Division Office of Pangasinan II",
             position: "Intern / OJT Developer",
             location: "Pangasinan, Philippines",
-            start: "2022",
-            end: "2022",
+            start: "2026",
             description: [
                 "Developed VLAG-DRFS, a document file tracking system for division record management.",
                 "Built PROJECT GEM and BE-DRS for DepEd Pangasinan II personnel and school heads.",
